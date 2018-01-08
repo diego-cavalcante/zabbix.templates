@@ -10,4 +10,11 @@ OBS: Para detalhes sobre o uso de cada monitoramento, consulte o arquivo LEIA-ME
 
 # ° LINUX
 
+zabbix.housekeeper
+
 # ° WINDOWS
+
+zabbix.backup.iperius\
+zabbix.fileserver\
+zabbix.mssql.server\
+zabbix.rdp.terminalserver\
