@@ -1,6 +1,6 @@
 ![alt tag](https://github.com/suportecavalcante/zabbix.templates/blob/master/screenshots/zabbix.jpg)
 
-Autor: Diego Cavalcante
+Autor: Diego Cavalcante\
 E-Mail: diego@suportecavalcante.com.br\
 Skype: suportecavalcante
 
