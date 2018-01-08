@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.2</version>
+    <date>2018-01-08T13:02:25Z</date>
+    <groups>
+        <group>
+            <name>SEM GRUPO</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template - LLD Housekeeper</template>
+            <name>Template - LLD Housekeeper</name>
+            <description>Desenvolvido por: Diego Cavalcante - 07/01/2018&#13;
+Monitora métricas de registros excluidos pelo Houskeeper.&#13;
+Monitora o tempo decorrido do Housekeeper.</description>
+            <groups>
+                <group>
+                    <name>SEM GRUPO</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>★ Housekeeper ★ Métricas</name>
+                </application>
+                <application>
+                    <name>★ Housekeeper ★ Tempo</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Tempo decorrido do ultimo (Housekeeper)</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>discovery.housekeeper[TEMPO]</key>
+                    <delay>3600</delay>
+                    <history>15</history>
+                    <trends>90</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>s</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Monitora o tempo gasto até a finalização do ultimo Housekeeper.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>★ Housekeeper ★ Tempo</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>★ Descoberta ★ Housekeeper</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>discovery.housekeeper[JSON]</key>
+                    <delay>3600</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>1</lifetime>
+                    <description>Descoberta de métricas do Housekeeper.</description>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Registros Excluidos em ({#HOUSEKEEPER})</name>
+                            <type>7</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>discovery.housekeeper[TABELA,{#HOUSEKEEPER}]</key>
+                            <delay>3600</delay>
+                            <history>15</history>
+                            <trends>90</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>Coleta o total de registros deletados na ultima execução do Housekeeper.&#13;
+Tabela: {#HOUSEKEEPER}</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>★ Housekeeper ★ Métricas</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes/>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>★ Housekeeper ★ Métricas em ({#HOUSEKEEPER})</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>0.0000</yaxismin>
+                            <yaxismax>100.0000</yaxismax>
+                            <show_work_period>1</show_work_period>
+                            <show_triggers>1</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>0</ymin_type_1>
+                            <ymax_type_1>0</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>5</drawtype>
+                                    <color>666666</color>
+                                    <yaxisside>1</yaxisside>
+                                    <calc_fnc>7</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>Template - LLD Housekeeper</host>
+                                        <key>discovery.housekeeper[TABELA,{#HOUSEKEEPER}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                    <host_prototypes/>
+                </discovery_rule>
+            </discovery_rules>
+            <httptests/>
+            <macros/>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{Template - LLD Housekeeper:discovery.housekeeper[TEMPO].last()}&gt;1m</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>Ultimo Housekeeper ({ITEM.LASTVALUE}) Tempo</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description>O tempo gasto pelo ultimo Housekeeper foi alto.&#13;
+Pode indicar alto processamento de dados sendo deletados.&#13;
+&#13;
+Limite: 1m</description>
+            <type>0</type>
+            <manual_close>1</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+    </triggers>
+    <graphs>
+        <graph>
+            <name>★ Housekeeper ★ Tempo Decorrido</name>
+            <width>900</width>
+            <height>200</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>1</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>0</ymin_type_1>
+            <ymax_type_1>0</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>5</drawtype>
+                    <color>1A7C11</color>
+                    <yaxisside>1</yaxisside>
+                    <calc_fnc>7</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template - LLD Housekeeper</host>
+                        <key>discovery.housekeeper[TEMPO]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
+</zabbix_export>
