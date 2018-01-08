@@ -6,6 +6,8 @@ Skype: suportecavalcante
 
 Repositório público de templates, scripts, confs e materiais relacionados os monitoramento com "ZABBIX".
 
+OBS: Para detalhes sobre o uso de cada monitoramento, consulte o arquivo LEIA-ME.pdf
+
 # ° LINUX
 
 # ° WINDOWS
