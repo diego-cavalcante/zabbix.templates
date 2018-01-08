@@ -17,4 +17,4 @@ zabbix.housekeeper
 zabbix.backup.iperius\
 zabbix.fileserver\
 zabbix.mssql.server\
-zabbix.rdp.terminalserver\
+zabbix.rdp.terminalserver
