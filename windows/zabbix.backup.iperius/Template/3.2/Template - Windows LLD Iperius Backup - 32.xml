@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.2</version>
+    <date>2018-01-06T07:09:05Z</date>
+    <groups>
+        <group>
+            <name>SEM GRUPO</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template - Windows LLD Iperius Backup</template>
+            <name>Template - Windows LLD Iperius Backup</name>
+            <description># Desenvolvido por Diego Cavalcante - 22/12/2017&#13;
+# Monitoramento de Jobs do Iperius Backup</description>
+            <groups>
+                <group>
+                    <name>SEM GRUPO</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>★ Serviços ★</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Iperius Backup Service</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>service.info[IperiusSvc]</key>
+                    <delay>300</delay>
+                    <history>7</history>
+                    <trends>30</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Serviço: IperiusSvc&#13;
+Nome: Iperius Backup Service&#13;
+Descrição: Iperius Backup Service</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>★ Serviços ★</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>★ STATUS ★ Serviço</name>
+                    </valuemap>
+                    <logtimefmt/>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>★ Descoberta ★ Iperius Backup Jobs</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>discovery.backup.iperius[JSONJOBS]</key>
+                    <delay>3600</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>1</lifetime>
+                    <description>Descoberta - Jobs de Backup - Iperius</description>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>({#JOBCONF}) Fim do Job</name>
+                            <type>7</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>discovery.backup.iperius.dados[JOBFIM,{#JOBCONF}]</key>
+                            <delay>3600</delay>
+                            <history>7</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>1</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>Monitora data e hora do final do Job de backup.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications/>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>★ Iperius Backup ★ Job Info - {#JOBCONF}</name>
+                                </application_prototype>
+                            </application_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>({#JOBCONF}) Inicio do Job</name>
+                            <type>7</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>discovery.backup.iperius.dados[JOBINICIO,{#JOBCONF}]</key>
+                            <delay>3600</delay>
+                            <history>7</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>1</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>Monitora data e hora do inicio do Job de backup.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications/>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>★ Iperius Backup ★ Job Info - {#JOBCONF}</name>
+                                </application_prototype>
+                            </application_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>({#JOBCONF}) Nome do Job</name>
+                            <type>7</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>discovery.backup.iperius.dados[JOBNOME,{#JOBCONF}]</key>
+                            <delay>3600</delay>
+                            <history>7</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>1</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>Monitora nome do Job de backup.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications/>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>★ Iperius Backup ★ Job Info - {#JOBCONF}</name>
+                                </application_prototype>
+                            </application_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>({#JOBCONF}) Status do Job</name>
+                            <type>7</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>discovery.backup.iperius.dados[JOBSTATUS,{#JOBCONF}]</key>
+                            <delay>3600</delay>
+                            <history>7</history>
+                            <trends>30</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>Monitora o Status do ultimo Job de backup.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications/>
+                            <valuemap>
+                                <name>★ STATUS ★ Iperius Backup</name>
+                            </valuemap>
+                            <logtimefmt/>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>★ Iperius Backup ★ Job Info - {#JOBCONF}</name>
+                                </application_prototype>
+                            </application_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>({#JOBCONF}) Tempo Decorrido do Job</name>
+                            <type>7</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>discovery.backup.iperius.dados[JOBTEMPO,{#JOBCONF}]</key>
+                            <delay>3600</delay>
+                            <history>7</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>1</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>Monitora o tempo decorrido do Job de backup.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications/>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>★ Iperius Backup ★ Job Info - {#JOBCONF}</name>
+                                </application_prototype>
+                            </application_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{Template - Windows LLD Iperius Backup:discovery.backup.iperius.dados[JOBSTATUS,{#JOBCONF}].last(0)}&lt;&gt;1 and {Template - Windows LLD Iperius Backup:discovery.backup.iperius.dados[JOBNOME,{#JOBCONF}].change(0)}=0</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>{#JOBCONF} ({ITEM.LASTVALUE2} {ITEM.LASTVALUE1})</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description>Ultimo Job do Iperius backup apresentou algum problema.&#13;
+Verifique o software para mais detalhes sobre o erro.&#13;
+&#13;
+JOBCONF = {#JOBCONF}&#13;
+JOBNOME = {ITEM.LASTVALUE2}&#13;
+JOBSTATUS = {ITEM.LASTVALUE1}</description>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>★ Iperius Backup ★ {#JOBCONF} Status</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>0.0000</yaxismin>
+                            <yaxismax>100.0000</yaxismax>
+                            <show_work_period>1</show_work_period>
+                            <show_triggers>1</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>0</ymin_type_1>
+                            <ymax_type_1>0</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>5</drawtype>
+                                    <color>0099CC</color>
+                                    <yaxisside>1</yaxisside>
+                                    <calc_fnc>7</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>Template - Windows LLD Iperius Backup</host>
+                                        <key>discovery.backup.iperius.dados[JOBSTATUS,{#JOBCONF}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                    <host_prototypes/>
+                </discovery_rule>
+            </discovery_rules>
+            <httptests/>
+            <macros/>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{Template - Windows LLD Iperius Backup:service.info[IperiusSvc].count(#3,0,gt)}=3</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>Iperius Backup Service ({ITEM.LASTVALUE})</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description>Serviço IperiusSvc | Iperius Backup Service está parado.</description>
+            <type>0</type>
+            <manual_close>1</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+    </triggers>
+    <value_maps>
+        <value_map>
+            <name>★ STATUS ★ Iperius Backup</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Erros</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Sucesso</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>Avisos</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Cancelado</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>Não Concluído</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>★ STATUS ★ Serviço</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Iniciado</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Pausado</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>Iniciar Pendente</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Pausa Pendente</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>Continuar Pendente</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>Parar Pendente</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>Parado</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>Desconhecido</newvalue>
+                </mapping>
+                <mapping>
+                    <value>255</value>
+                    <newvalue>Desconhecido</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>
