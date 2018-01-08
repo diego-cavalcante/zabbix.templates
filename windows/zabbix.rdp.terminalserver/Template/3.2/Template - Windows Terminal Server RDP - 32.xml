@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.2</version>
+    <date>2018-01-05T17:40:01Z</date>
+    <groups>
+        <group>
+            <name>SEM GRUPO</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template - Windows Terminal Server RDP</template>
+            <name>Template - Windows Terminal Server RDP</name>
+            <description># Desenvolvido por Diego Cavalcante - 10/02/2017&#13;
+# Monitoramento Windows RDP - Terminal Server</description>
+            <groups>
+                <group>
+                    <name>SEM GRUPO</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>★ RDP ★ Terminal Server</name>
+                </application>
+                <application>
+                    <name>★ Serviços ★</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Porta</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>net.tcp.port[,{$RDPPORTA}]</key>
+                    <delay>300</delay>
+                    <history>7</history>
+                    <trends>30</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Monitora se a porta do TS está aberta.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>★ RDP ★ Terminal Server</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>★ STATUS ★ Check Porta</name>
+                    </valuemap>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Usuários Ativos Total</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>rdp.terminal.server[ATIVONUM]</key>
+                    <delay>120</delay>
+                    <history>7</history>
+                    <trends>30</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Número total de usuários ativos no Terminal Server.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>★ RDP ★ Terminal Server</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Usuários Ativos</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>rdp.terminal.server[ATIVO]</key>
+                    <delay>120</delay>
+                    <history>30</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>4</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Monitora quais usuários estão conectados ao Terminal Server.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>★ RDP ★ Terminal Server</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Usuários Dispositivos</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>rdp.terminal.server[DEVICE]</key>
+                    <delay>120</delay>
+                    <history>30</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>4</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Monitora o nome dos dispositivos dos usuários do Terminal Server.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>★ RDP ★ Terminal Server</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Usuários Inativos Total</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>rdp.terminal.server[INATIVONUM]</key>
+                    <delay>120</delay>
+                    <history>7</history>
+                    <trends>30</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Monitora o total de usuários que estão desconectados do Terminal Server.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>★ RDP ★ Terminal Server</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Usuários Inativos</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>rdp.terminal.server[INATIVO]</key>
+                    <delay>120</delay>
+                    <history>30</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>4</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Monitora quais usuários estão desconectados do Terminal Server.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>★ RDP ★ Terminal Server</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Usuários IP</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>rdp.terminal.server[IP]</key>
+                    <delay>120</delay>
+                    <history>30</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>4</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Monitora o IP dos dispositivos dos usuários do Terminal Server.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>★ RDP ★ Terminal Server</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Remote Desktop Services</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>service.info[TermService]</key>
+                    <delay>300</delay>
+                    <history>7</history>
+                    <trends>30</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Serviço: TermService&#13;
+Nome: Remote Desktop Services&#13;
+Descrição: Permite que os usuários se conectem interativamente a um computador remoto. Remote Desktop e Remote Desktop Session Host Server dependem deste serviço. Para evitar o uso remoto deste computador, desmarque as caixas de seleção na guia Remoto do item do painel de controle Propriedades do sistema.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>★ Serviços ★</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>★ STATUS ★ Serviço</name>
+                    </valuemap>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Remote Desktop Licensing</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>service.info[TermServLicensing]</key>
+                    <delay>300</delay>
+                    <history>7</history>
+                    <trends>30</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Serviço: TermServLicensing&#13;
+Nome: Remote Desktop Licensing&#13;
+Descrição: Fornece licenças registradas para clientes de Serviços de Área de Trabalho Remota. Se esse serviço for interrompido, o servidor não estará disponível para emitir licenças de Serviços de Área de Trabalho Remota aos clientes quando eles forem solicitados.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>★ Serviços ★</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>★ STATUS ★ Serviço</name>
+                    </valuemap>
+                    <logtimefmt/>
+                </item>
+            </items>
+            <discovery_rules/>
+            <httptests/>
+            <macros/>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{Template - Windows Terminal Server RDP:rdp.terminal.server[ATIVONUM].last()}&gt;{$RDPA}</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>RDP ({ITEM.LASTVALUE}) Usuários Conectados</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description>Existem muitos usuários conectados via TS no servidor no momento, pode causar sobrecarga e perda de desempenho.&#13;
+&#13;
+Limite para este servidor = {$RDPA}</description>
+            <type>0</type>
+            <manual_close>1</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Template - Windows Terminal Server RDP:rdp.terminal.server[INATIVONUM].last()}&gt;{$RDPI}</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>RDP ({ITEM.LASTVALUE}) Usuários Inativos</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description>Existem muitos usuários inativos via TS no servidor no momento, pode causar sobrecarga e perda de desempenho.&#13;
+&#13;
+Limite para este servidor = {$RDPI}</description>
+            <type>0</type>
+            <manual_close>1</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Template - Windows Terminal Server RDP:net.tcp.port[,{$RDPPORTA}].last(0)}=0</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>RDP Porta ({ITEM.LASTVALUE})</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description>Porta TS não está na escuta.</description>
+            <type>0</type>
+            <manual_close>1</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Template - Windows Terminal Server RDP:service.info[TermServLicensing].count(#3,0,gt)}=3</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>Remote Desktop Licensing ({ITEM.LASTVALUE})</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description>Serviço: TermServLicensing&#13;
+Nome: Remote Desktop Licensing&#13;
+Descrição: Fornece licenças registradas para clientes de Serviços de Área de Trabalho Remota. Se esse serviço for interrompido, o servidor não estará disponível para emitir licenças de Serviços de Área de Trabalho Remota aos clientes quando eles forem solicitados.</description>
+            <type>0</type>
+            <manual_close>1</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Template - Windows Terminal Server RDP:service.info[TermService].count(#3,0,gt)}=3</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>Remote Desktop Services ({ITEM.LASTVALUE})</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description>Serviço: TermService&#13;
+Nome: Remote Desktop Services&#13;
+Descrição: Permite que os usuários se conectem interativamente a um computador remoto. Remote Desktop e Remote Desktop Session Host Server dependem deste serviço. Para evitar o uso remoto deste computador, desmarque as caixas de seleção na guia Remoto do item do painel de controle Propriedades do sistema.</description>
+            <type>0</type>
+            <manual_close>1</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+    </triggers>
+    <graphs>
+        <graph>
+            <name>★ RDP ★ Estatísticas de Conexões</name>
+            <width>900</width>
+            <height>200</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>1</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>0</ymin_type_1>
+            <ymax_type_1>0</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>5</drawtype>
+                    <color>00CC00</color>
+                    <yaxisside>1</yaxisside>
+                    <calc_fnc>7</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template - Windows Terminal Server RDP</host>
+                        <key>rdp.terminal.server[ATIVONUM]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>5</drawtype>
+                    <color>F63100</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>7</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template - Windows Terminal Server RDP</host>
+                        <key>rdp.terminal.server[INATIVONUM]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
+    <value_maps>
+        <value_map>
+            <name>★ STATUS ★ Check Porta</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Inacessível</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Aberta</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>★ STATUS ★ Serviço</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Iniciado</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Pausado</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>Iniciar Pendente</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Pausa Pendente</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>Continuar Pendente</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>Parar Pendente</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>Parado</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>Desconhecido</newvalue>
+                </mapping>
+                <mapping>
+                    <value>255</value>
+                    <newvalue>Desconhecido</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>
