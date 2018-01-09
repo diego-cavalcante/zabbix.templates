@@ -3,7 +3,7 @@
 Autor: Diego Cavalcante\
 E-Mail: diego@suportecavalcante.com.br\
 Skype: suportecavalcante\
-Publicaçes: [https://share.zabbix.com](https://share.zabbix.com/owner/diegocavalcante)
+Publicaçes: [https://share.zabbix.com/owner/diegocavalcante](https://share.zabbix.com/owner/diegocavalcante)
 
 Repositório público de templates, scripts, confs e materiais relacionados os monitoramento com "ZABBIX".
 
