@@ -2,7 +2,8 @@
 
 Autor: Diego Cavalcante\
 E-Mail: diego@suportecavalcante.com.br\
-Skype: suportecavalcante
+Skype: suportecavalcante\
+Publicaçes: [https://share.zabbix.com](https://share.zabbix.com/owner/diegocavalcante)
 
 Repositório público de templates, scripts, confs e materiais relacionados os monitoramento com "ZABBIX".
 
@@ -10,7 +11,8 @@ OBS: Para detalhes sobre o uso de cada monitoramento, consulte o arquivo LEIA-ME
 
 # ° LINUX
 
-zabbix.housekeeper
+zabbix.housekeeper\
+zabbix.zone.dnsserver
 
 # ° WINDOWS
 
