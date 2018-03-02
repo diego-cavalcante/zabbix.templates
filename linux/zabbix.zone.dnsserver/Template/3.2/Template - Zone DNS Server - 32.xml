@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.4</version>
+    <date>2018-03-02T03:08:07Z</date>
+    <groups>
+        <group>
+            <name>SEM GRUPO</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template - Zone DNS Server</template>
+            <name>Template - Zone DNS Server</name>
+            <description>Desenvolvido por Diego Cavalcante - 24/11/2017&#13;
+Monitoramento Zona DNS Status, DNS Servers Status e Tempo de Resposta</description>
+            <groups>
+                <group>
+                    <name>SEM GRUPO</name>
+                </group>
+            </groups>
+            <applications/>
+            <items/>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>★ Descoberta ★ Zona DNS {$DNSZONA}</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>discovery.dnsserver.status[JSON,8.8.8.8,{$DNSZONA},NS]</key>
+                    <delay>1h</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>1d</lifetime>
+                    <description>Descoberta dos Servidores DNS de uma Zona DNS especifica.&#13;
+Monta o JSON com as seguintes informações.&#13;
+&#13;
+DNSSERVER&#13;
+DNSIP&#13;
+DNSZONA</description>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Tempo de Resposta {#DNSSERVER} - {#DNSIP} (NS)</name>
+                            <type>0</type>
+                            <snmp_community/>
+                            <snmp_oid/>
+                            <key>discovery.dnsserver.status.tempo[TEMPO,{#DNSIP},{#DNSZONA},NS]</key>
+                            <delay>5m</delay>
+                            <history>15d</history>
+                            <trends>60d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units>ms</units>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>Tempo de Resposta da Zona DNS Consultada. (NS)</description>
+                            <inventory_link>0</inventory_link>
+                            <applications/>
+                            <valuemap>
+                                <name>★ STATUS ★ Zona DNS - Resposta</name>
+                            </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>★ Zona DNS ★ {#DNSZONA} - {#DNSSERVER}</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <master_item_prototype/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Status {#DNSSERVER} - {#DNSIP} (MX)</name>
+                            <type>0</type>
+                            <snmp_community/>
+                            <snmp_oid/>
+                            <key>net.dns[{#DNSIP},{#DNSZONA},MX,2,1]</key>
+                            <delay>5m</delay>
+                            <history>15d</history>
+                            <trends>60d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>Status da Zona DNS Consultada. (MX)</description>
+                            <inventory_link>0</inventory_link>
+                            <applications/>
+                            <valuemap>
+                                <name>★ STATUS ★ Zona DNS</name>
+                            </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>★ Zona DNS ★ {#DNSZONA} - {#DNSSERVER}</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <master_item_prototype/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Status {#DNSSERVER} - {#DNSIP} (NS)</name>
+                            <type>0</type>
+                            <snmp_community/>
+                            <snmp_oid/>
+                            <key>net.dns[{#DNSIP},{#DNSZONA},NS,2,1]</key>
+                            <delay>5m</delay>
+                            <history>15d</history>
+                            <trends>60d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>Status da Zona DNS Consultada. (NS)</description>
+                            <inventory_link>0</inventory_link>
+                            <applications/>
+                            <valuemap>
+                                <name>★ STATUS ★ Zona DNS</name>
+                            </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>★ Zona DNS ★ {#DNSZONA} - {#DNSSERVER}</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <master_item_prototype/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Status {#DNSSERVER} - {#DNSIP} (SOA)</name>
+                            <type>0</type>
+                            <snmp_community/>
+                            <snmp_oid/>
+                            <key>net.dns[{#DNSIP},{#DNSZONA},SOA,2,1]</key>
+                            <delay>5m</delay>
+                            <history>15d</history>
+                            <trends>60d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>Status da Zona DNS Consultada. (SOA)</description>
+                            <inventory_link>0</inventory_link>
+                            <applications/>
+                            <valuemap>
+                                <name>★ STATUS ★ Zona DNS</name>
+                            </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>★ Zona DNS ★ {#DNSZONA} - {#DNSSERVER}</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <master_item_prototype/>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{Template - Zone DNS Server:net.dns[{#DNSIP},{#DNSZONA},MX,2,1].count(#2,0,eq)}=2</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>(MX) {#DNSSERVER} ({ITEM.LASTVALUE})</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description>Servidor DNS da zona {#DNSZONA} não responde.&#13;
+Timeout: 1s&#13;
+DNS Zona: {#DNSZONA}&#13;
+DNS Server: {#DNSSERVER}&#13;
+DNS IP: {#DNSIP}</description>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template - Zone DNS Server:discovery.dnsserver.status.tempo[TEMPO,{#DNSIP},{#DNSZONA},NS].count(#2,0,eq)}=2</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>(NS) {#DNSSERVER} (Resposta {ITEM.LASTVALUE})</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>3</priority>
+                            <description>Servidor DNS da zona {#DNSZONA} - tempo de resposta falhou.&#13;
+&#13;
+Timeout: 5s&#13;
+DNS Zona: {#DNSZONA}&#13;
+DNS Server: {#DNSSERVER}&#13;
+DNS IP: {#DNSIP}&#13;
+&#13;
+Possíveis Causas:&#13;
+&#13;
+1 = FORMERR&#13;
+2 = SERVFAIL&#13;
+3 = NXDOMAIN&#13;
+4 = NOTIMP&#13;
+5 = REFUSED&#13;
+6 = YXDOMAIN&#13;
+7 = XRRSET&#13;
+8 = NOTAUTH&#13;
+9 = NOTZONE</description>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template - Zone DNS Server:discovery.dnsserver.status.tempo[TEMPO,{#DNSIP},{#DNSZONA},NS].count(#2,500,gt)}=2</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>(NS) {#DNSSERVER} (Resposta {ITEM.LASTVALUE})</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description>Servidor DNS da zona {#DNSZONA} - tempo de resposta acima de 500ms.&#13;
+Timeout: 5s&#13;
+DNS Zona: {#DNSZONA}&#13;
+DNS Server: {#DNSSERVER}&#13;
+DNS IP: {#DNSIP}</description>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template - Zone DNS Server:net.dns[{#DNSIP},{#DNSZONA},NS,2,1].count(#2,0,eq)}=2</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>(NS) {#DNSSERVER} ({ITEM.LASTVALUE})</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description>Servidor DNS da zona {#DNSZONA} não responde.&#13;
+Timeout: 1s&#13;
+DNS Zona: {#DNSZONA}&#13;
+DNS Server: {#DNSSERVER}&#13;
+DNS IP: {#DNSIP}</description>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template - Zone DNS Server:net.dns[{#DNSIP},{#DNSZONA},SOA,2,1].count(#2,0,eq)}=2</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>(SOA) {#DNSSERVER} ({ITEM.LASTVALUE})</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description>Servidor DNS da zona {#DNSZONA} não responde.&#13;
+Timeout: 1s&#13;
+DNS Zona: {#DNSZONA}&#13;
+DNS Server: {#DNSSERVER}&#13;
+DNS IP: {#DNSIP}</description>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>★ (NS) ★ ({#DNSZONA}) {#DNSSERVER} - Estatísticas</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>0.0000</yaxismin>
+                            <yaxismax>100.0000</yaxismax>
+                            <show_work_period>1</show_work_period>
+                            <show_triggers>1</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>0</ymin_type_1>
+                            <ymax_type_1>0</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>1A7C11</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>7</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>Template - Zone DNS Server</host>
+                                        <key>net.dns[{#DNSIP},{#DNSZONA},MX,2,1]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>F63100</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>7</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>Template - Zone DNS Server</host>
+                                        <key>net.dns[{#DNSIP},{#DNSZONA},NS,2,1]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>2</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>2774A4</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>7</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>Template - Zone DNS Server</host>
+                                        <key>net.dns[{#DNSIP},{#DNSZONA},SOA,2,1]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>3</sortorder>
+                                    <drawtype>5</drawtype>
+                                    <color>888888</color>
+                                    <yaxisside>1</yaxisside>
+                                    <calc_fnc>7</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>Template - Zone DNS Server</host>
+                                        <key>discovery.dnsserver.status.tempo[TEMPO,{#DNSIP},{#DNSZONA},NS]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                    <host_prototypes/>
+                    <jmx_endpoint/>
+                </discovery_rule>
+            </discovery_rules>
+            <httptests/>
+            <macros/>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+    <value_maps>
+        <value_map>
+            <name>★ STATUS ★ Zona DNS</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Indisponível</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Operacional</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>★ STATUS ★ Zona DNS - Resposta</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>ERRO</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>
