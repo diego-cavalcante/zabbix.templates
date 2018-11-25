@@ -14,19 +14,15 @@ Help: Execute /bin/bash discovery.housekeeper.sh para informações de uso.\
 Help: Run /bin/bash discovery.housekeeper.sh for usage information.\
 Zabbix Share: [https://share.zabbix.com/owner/diegocavalcante](https://share.zabbix.com/owner/diegocavalcante)
 
-Repositório público de templates, scripts, confs e materiais relacionados os monitoramento com "ZABBIX".
-
 OBS: Para detalhes sobre o uso, consulte o arquivo LEIA-ME.pdf
 
-# ° LINUX
+# ° SCREENSHOTS
 
-zabbix.housekeeper\
-zabbix.zone.dnsserver\
-zabbix.eleicoes.2018
-
-# ° WINDOWS
-
-zabbix.backup.iperius\
-zabbix.fileserver\
-zabbix.mssql.server\
-zabbix.rdp.terminalserver
+![alt tag](https://github.com/suportecavalcante/zabbix.templates/blob/master/linux/ZAKEEP.zabbix.housekeeper.monitor/screenshots/04.png)
+![alt tag](https://github.com/suportecavalcante/zabbix.templates/blob/master/linux/ZAKEEP.zabbix.housekeeper.monitor/screenshots/05.png)
+![alt tag](https://github.com/suportecavalcante/zabbix.templates/blob/master/linux/ZAKEEP.zabbix.housekeeper.monitor/screenshots/06.png)
+![alt tag](https://github.com/suportecavalcante/zabbix.templates/blob/master/linux/ZAKEEP.zabbix.housekeeper.monitor/screenshots/07.png)
+![alt tag](https://github.com/suportecavalcante/zabbix.templates/blob/master/linux/ZAKEEP.zabbix.housekeeper.monitor/screenshots/08.png)
+![alt tag](https://github.com/suportecavalcante/zabbix.templates/blob/master/linux/ZAKEEP.zabbix.housekeeper.monitor/screenshots/01.png)
+![alt tag](https://github.com/suportecavalcante/zabbix.templates/blob/master/linux/ZAKEEP.zabbix.housekeeper.monitor/screenshots/02.png)
+![alt tag](https://github.com/suportecavalcante/zabbix.templates/blob/master/linux/ZAKEEP.zabbix.housekeeper.monitor/screenshots/03.png)
