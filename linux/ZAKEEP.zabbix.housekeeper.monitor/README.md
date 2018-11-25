@@ -10,11 +10,9 @@ Description BR: Coleta métricas sobre a execução do Housekeeper.\
 Description BR: Fornece relatório sobre as ultimas execuções (dados deletados, data e tempo).\
 Description EN: Collect Metrics on Housekeeper Execution.\
 Description EN: Provides report on the last executions (data deleted, date and time).\
-Help: Execute /bin/bash discovery.housekeeper.sh para informações de uso.\
-Help: Run /bin/bash discovery.housekeeper.sh for usage information.\
-Zabbix Share: [https://share.zabbix.com/owner/diegocavalcante](https://share.zabbix.com/owner/diegocavalcante)
-
-OBS: Para detalhes sobre o uso, consulte o arquivo LEIA-ME.pdf
+Help BR: Execute /bin/bash discovery.housekeeper.sh para informações de uso.\
+Help EN: Run /bin/bash discovery.housekeeper.sh for usage information.\
+OBS: Consulte o arquivo LEIA-ME.pdf para informações detalhadas de uso.
 
 # ° SCREENSHOTS
 
