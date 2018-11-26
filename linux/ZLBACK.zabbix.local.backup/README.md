@@ -1,0 +1,23 @@
+![alt tag](https://github.com/suportecavalcante/zabbix.templates/blob/master/screenshots/zabbix.jpg)
+
+Autor: Diego Cavalcante\
+E-Mail: diego@suportecavalcante.com.br\
+Telegram: @diego_cavalcante\
+Zabbix Share: [https://share.zabbix.com/owner/diegocavalcante](https://share.zabbix.com/owner/diegocavalcante)
+
+Repositório público de templates, scripts, confs e materiais relacionados com monitoramento "ZABBIX"
+
+OBS: Para detalhes sobre o uso de cada monitoramento, consulte o arquivo LEIA-ME.pdf
+
+# ° LINUX
+
+zabbix.housekeeper\
+zabbix.zone.dnsserver\
+zabbix.eleicoes.2018
+
+# ° WINDOWS
+
+zabbix.backup.iperius\
+zabbix.fileserver\
+zabbix.mssql.server\
+zabbix.rdp.terminalserver
