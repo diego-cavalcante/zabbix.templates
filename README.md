@@ -11,9 +11,9 @@ OBS: Para detalhes sobre o uso de cada monitoramento, consulte o arquivo LEIA-ME
 
 # ° LINUX
 
-zabbix.housekeeper\
-zabbix.zone.dnsserver\
-zabbix.eleicoes.2018
+ZAKEEP.zabbix.housekeeper.monitor\
+ZDNSS.zabbix.dnsserver.status\
+ZAE2018.zabbix.eleicoes.2018
 
 # ° WINDOWS
 
